@@ -1,0 +1,26 @@
+{
+  "name": "type-mirror",
+  "type": "module",
+  "version": "0.0.0",
+  "author": "4xi",
+  "bin": {
+    "typemir": "./cli.mjs"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --clean --dts",
+    "prepare:type": "tsup --dts-only",
+    "stub": "tsup --watch --onSuccess 'tsup --dts-only'"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.31"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "json-to-ts": "^2.1.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "unconfig": "^0.3.13"
+  }
+}
